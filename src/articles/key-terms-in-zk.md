@@ -8,7 +8,7 @@ categories: ["beginner", "zkp essentails"]
 # Key Terms in ZKP
 You must have been heraing a lot of differnet terms about Zero Knowledge Proofs. Here is a quick guide to help you understand the key terms in ZKP.
 
-### ZKP
+# ZKP
 
 Zero Knowledge Proof - a method of proving the validity of a statement without disclosing any information beyond the validity itself. It is a cryptographic method, adn there are different ways of implementing it. 
 ZKPs must satisfy three properties: 
@@ -25,7 +25,8 @@ For example:
 - i know such a number x that SHA256(x) = 0x77af... - but i will not tell you the x.
 
 One clear example will be Public key cryptography. You are proving that you are the owner of specific public key without actually showing the private key.
-### zkSnarks 
+
+# zkSnarks 
 
 Stands for "Succinct Non-Interactive Argument of Knowledge." 
 
@@ -45,7 +46,7 @@ zk-SNARKs operate through three main algorithms:
     
     - The verifier uses the verification key and the proof to check its validity. If the proof is valid, it confirms that the prover knows the witness without learning anything about the witness itself.
 
-### zkStarks
+# zkStarks
 
 zk-STARKs, or **Zero-Knowledge Scalable Transparent Arguments of Knowledge**, are a type of cryptographic proof that allows one party (the prover) to demonstrate knowledge of a specific piece of information to another party (the verifier) without revealing the information itself. Unlike zk-SNARKs, zk-STARKs do not require a trusted setup, making them more transparent and scalable.
 
@@ -64,7 +65,7 @@ zk-STARKs involve three main components:
     
     - The verifier uses the generated proof along with the public parameters to confirm its validity. Verification is efficient, even for large computations, thanks to the scalability of zk-STARKs.
 
-### Difference of zkSnark and zkStark
+# Difference of zkSnark and zkStark
 
 1. **Trusted Setup**:
     
@@ -81,7 +82,7 @@ zk-STARKs involve three main components:
     - **zk-STARKs** have slower verification speeds, particularly for smaller datasets; however, they scale better with larger datasets, making them more efficient for complex computations 
 
 
-### Prover
+# Prover
 A prover is an entity (which can be a person, device, or program) that demonstrates the validity of a statement or claim without disclosing any underlying data. In ZKPs, the prover must possess knowledge of a secret (the witness) that allows them to create a valid proof.
 
 Functions of the Prover
@@ -110,7 +111,7 @@ Example Use Case
     
     - In secure identity verification systems, individuals can act as provers to demonstrate their identity without disclosing personal data. For instance, using zk-SNARKs, a user can prove they are over 18 without revealing their exact age or birthdate.
 
-### Proof
+# Proof
 
 A proof in ZKP serves as evidence that the prover knows a secret or can perform a certain computation without disclosing the underlying data. The key characteristics of a proof include:
 
@@ -168,7 +169,7 @@ Verification involves checking whether the received proof is valid without revea
     
     - If the verification function returns true, it confirms that the prover knows the witness corresponding to the public input; otherwise, it returns false.
 
-### Verifier
+# Verifier
 
 A verifier is an entity (which can be a person, software, or smart contract) that receives a proof from the prover and determines whether it is valid based on predefined criteria. The verifier does not need to know any details about the underlying data; they only need to confirm that the proof is correct.
 
@@ -186,7 +187,7 @@ A verifier is an entity (which can be a person, software, or smart contract) tha
         - **Evaluating**: The verification function evaluates whether the proof meets specific criteria.
         - **Outputting**: The result indicates whether the proof is valid (true) or invalid (false).
 
-### Witness
+# Witness
 
 In ZKP terminology, the witness (often denoted as *w*) is the private input that allows the prover to satisfy a certain relation or condition defined by a public statement. The witness is not disclosed during the proof process; instead, it is used internally by the prover to create a valid proof.
 
@@ -215,7 +216,7 @@ Consider an example where Alice wants to prove she knows a secret number that sa
 4. **Proof Generation**: Alice generates a proof using her secret number (5) and sends it to Bob (the verifier).
 5. **Verification**: Bob checks Alice's proof against the public input (25). If valid, he confirms she knows a number whose square equals 25 without knowing what that number is.
 
-### Trusted Setup
+# Trusted Setup
 
 **Trusted setup** is a crucial process in zk-SNARKs (Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge) that ensures the security and integrity of the proof system. Here’s a detailed breakdown tailored for developers.
 
@@ -293,7 +294,7 @@ Here’s a step-by-step breakdown of Zcash’s trusted setup process:
 
     Here is a video explaining the trusted setup in Zcash: https://www.youtube.com/watch?v=D6dY-3x3teM
 
-### zk Circuit
+# zk Circuit
 
 **zk circuits** are a fundamental component of Zero-Knowledge Proofs (ZKPs), specifically in the context of zk-SNARKs. They represent computations in a way that allows for the verification of correctness without revealing the underlying data. Here’s a detailed overview of zk circuits, their structure, and their role in ZKP systems.
 
@@ -348,7 +349,7 @@ The primary purpose of zk circuits is to allow a prover to demonstrate knowledge
     
     - The verifier uses the verification key and public inputs to check the validity of the proof.
     - If valid, it confirms that the prover knows a witness satisfying the constraints defined in the circuit.
-### zk Coprocessor
+# zk Coprocessor
 
 - In traditional computing, **coprocessors** (like GPUs) handle specialized tasks to augment the CPU's capabilities.    
 
@@ -409,7 +410,7 @@ The primary purpose of zk coprocessors is to enable complex computations that wo
 3. Gaming and NFTs
 
 
-### TEE
+# TEE
 The primary purpose of TEEs is to enable secure processing of sensitive data while maintaining confidentiality and integrity. They are particularly useful in scenarios where data privacy is paramount, such as in financial services, healthcare applications, and privacy-preserving social networks
 
 #### How TEEs Work
@@ -439,7 +440,7 @@ The primary purpose of TEEs is to enable secure processing of sensitive data whi
     
     - Amazon Web Services (AWS) offers Nitro Enclaves, which provide a way to create isolated compute environments within AWS infrastructure. Nitro Enclaves enable customers to process sensitive data securely while leveraging AWS's scalable cloud services.
 
-### zkVM
+# zkVM
 
 **zkVM** (Zero-Knowledge Virtual Machine) is a specialized framework designed to enable the execution of arbitrary programs while ensuring that the computations can be verified using zero-knowledge proofs (ZKPs). This allows developers to create applications that can perform complex computations off-chain while maintaining privacy and security.
 
@@ -473,11 +474,12 @@ The main objectives of zkVM are:
 
 - **Continuations**: This feature allows developers to split large computations into smaller segments that can be proven independently. It enables parallel proving and removes limits on computation size, allowing for more complex applications.
 - **Integration with Existing Ecosystems**: zkVM can interact with existing blockchain infrastructures, enabling developers to leverage off-chain computations while maintaining compatibility with on-chain smart contracts.
-### zkEVM
+
+# zkEVM
 
 **zkEVM** (Zero-Knowledge Ethereum Virtual Machine) is a specialized implementation of the Ethereum Virtual Machine (EVM) that integrates zero-knowledge proof technology. It allows developers to create and execute smart contracts while ensuring that computations can be verified without revealing sensitive data. This approach enhances privacy, scalability, and efficiency in blockchain applications.
 
-## Purpose of zkEVM
+#### Purpose of zkEVM
 
 The main objectives of zkEVM are:
 
@@ -485,7 +487,7 @@ The main objectives of zkEVM are:
 - **Scalability**: Reduce the computational burden on the Ethereum network by allowing off-chain execution of complex operations.
 - **Compatibility**: Maintain compatibility with existing Ethereum smart contracts, making it easier for developers to adopt zk technology.
 
-## How zkEVM Works
+#### How zkEVM Works
 
 1. **Program Execution**:
     
@@ -502,7 +504,7 @@ The main objectives of zkEVM are:
     - The generated proof is sent to a smart contract on the Ethereum blockchain, where it can be verified using a verification key.
     - If valid, this confirms that the computation was executed correctly without exposing sensitive data.
 
-### zkEVM vs zkVM
+# zkEVM vs zkVM
 
 **zkVM** (Zero-Knowledge Virtual Machine) and **zkEVM** (Zero-Knowledge Ethereum Virtual Machine) are both frameworks that leverage zero-knowledge proofs (ZKPs) for secure computation, but they serve different purposes and have distinct characteristics. Here’s a breakdown of their differences:
 
@@ -559,7 +561,7 @@ The main objectives of zkEVM are:
     - Generally easier to build upon due to its flexibility and lack of dependency on EVM architecture.
     - Developers can focus on creating zero-knowledge applications without worrying about EVM constraints.
 
-### zkML
+# zkML
 
 **zkML** stands for **Zero-Knowledge Machine Learning**, an innovative approach that combines machine learning with zero-knowledge proofs (ZKPs). This technology allows for the secure application and verification of machine learning models and their outputs without exposing sensitive data. Here’s a detailed overview of how zkML works, its purpose, the use of zero-knowledge proofs, and its real-life applications.
 
@@ -596,7 +598,8 @@ The main objectives of zkEVM are:
 - **Confidentiality**: ZKPs allow parties to prove knowledge or correctness of information without revealing the information itself. This is essential in scenarios where sensitive data must remain private.
 - **Integrity Verification**: ZKPs provide a mechanism for verifying that computations were performed correctly based on legitimate inputs without exposing those inputs.
 - **Decentralization**: ZKPs support decentralized architectures by enabling multiple parties to collaborate on machine learning tasks while ensuring that no single party has access to all data.
-### FHE
+
+# FHE
 
 **Fully Homomorphic Encryption (FHE)** is a cryptographic method that allows computations to be performed on encrypted data without needing to decrypt it first. This capability enables the processing of sensitive information while preserving privacy, making it particularly valuable in applications where data confidentiality is critical.
 
@@ -621,7 +624,8 @@ The main objectives of zkEVM are:
 - **Data Privacy**: FHE enables organizations to process sensitive data (like personal information or financial records) while keeping it encrypted, thus ensuring that unauthorized parties cannot access it during processing.
 - **Secure Computation**: It allows for secure cloud computing where clients can send encrypted data to a service provider for processing without exposing their sensitive information.
 - **Regulatory Compliance**: FHE helps organizations comply with data protection regulations (like GDPR) by minimizing exposure of sensitive data during computation.
-### HSM
+
+# HSM
 
 **Hardware Security Modules (HSMs)** are physical devices used to manage and safeguard digital keys for strong authentication and provide cryptographic processing. In the context of zero-knowledge proofs (ZKPs), HSMs play a crucial role in enhancing security and efficiency during the proof generation process.
 
