@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+  }
+  
+  .outline {
+    flex: 0 0 200px; /* Fixed width for the outline */
+    padding-right: 1rem;
+  }
+  
+  .outline h2 {
+    font-size: 1.5rem;
+  }
+  
+  .outline ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .outline li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .outline a {
+    text-decoration: none;
+    color: #0070f3; /* Change to your desired link color */
+  }
+  
+  .outline a:hover {
+    text-decoration: underline;
+  }
+  
+  .article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  .backButton {
+    background-color: #0070f3; /* Button color */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .backButton:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .category {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 0.25rem 0.5rem;
+    border-radius:9999px;
+   font-size: .8rem; 
+  }
+  
+  .content {
+   line-height:1.8; 
+  }
+   
+  .content h2, 
+  .content h3 {
+   cursor:pointer; /* Indicate that headings are clickable */
+  }
+   
+  .content h2 {
+   font-size:1.8rem; 
+   margin-top:.5rem; 
+   margin-bottom:.5rem; 
+   font-weight:bold; /* Different style for h2 */
+  }
+   
+  .content h3 {
+   font-size:.9rem; /* Different style for h3 */
+   margin-top:.5rem; 
+   margin-bottom:.25rem; 
+  }
+   
+  .content p {
+   margin-bottom:.75rem; 
+  }
+   
+  .content ul, .content ol {
+   margin-bottom:.75rem; 
+   padding-left:.75rem; 
+  }
+   
+  .content a {
+   color:#0070f3; /* Change to your desired link color */
+   text-decoration:none; 
+  }
+   
+  .content a:hover {
+   text-decoration:underline; 
+  }

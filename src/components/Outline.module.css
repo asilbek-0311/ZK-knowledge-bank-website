@@ -1,0 +1,26 @@
+.outline {
+flex: 0 0 200px; /* Fixed width for the outline */
+padding-right: 1rem;
+}
+
+.outline h2 {
+font-size: 1.5rem;
+}
+
+.outline ul {
+list-style-type: none;
+padding-left: 0;
+}
+
+.outline li {
+margin-bottom: 0.5rem;
+}
+
+.outline a {
+text-decoration: none;
+color: #0070f3; /* Change to your desired link color */
+}
+
+.outline a:hover {
+text-decoration: underline;
+}

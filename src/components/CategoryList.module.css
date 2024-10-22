@@ -1,0 +1,34 @@
+.categoryList {
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .link {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (min-width: 768px) {
+    .categoryList {
+      width: 25%;
+    }
+  }
